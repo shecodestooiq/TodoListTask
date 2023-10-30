@@ -1,5 +1,10 @@
+import ToDoListUseReducer from "./Components/ToDoList";
+
 function App() {
-  return <div>Todo List task</div>;
+  return (<>
+    <ToDoListUseReducer />
+
+  </>);
 }
 
 export default App;
