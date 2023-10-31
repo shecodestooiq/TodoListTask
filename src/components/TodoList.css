@@ -1,0 +1,17 @@
+.bnt{
+    display: flex;
+    gap: 1rem;
+    font-family: monospace;
+}
+
+.right-btn{
+justify-items: flex-start;
+}
+
+.left-btn{
+    justify-items: flex-end;
+}
+.p{
+    width: 100%;
+}
+

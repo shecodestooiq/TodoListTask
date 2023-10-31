@@ -1,13 +1,216 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --purple-color: #7d05a4;
+  --pink-color: #cc1e6c;
+  --navy-color: #123456;
+  --grey-color: #f3f3f3;
+  --dark-grey-color: #545454;
+  --white-color: #fefefe;
+  --black-color: #010101;
+  --light-black-color: #7d7d7d;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-family: monospace;
+  color: var(--navy-color);
+}
+
+ul {
+  margin: 2rem;
+  width: 60%;
+  min-height: 80vh;
+  background-color: var(--grey-color);
+  border-radius: 2rem;
+  box-shadow: 0px 0px 2px 0px var(--pink-color);
+}
+
+li {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 1.5rem 4rem;
+  border-bottom: 1px solid var(--navy-color);
+}
+
+button {
+  font-family: monospace;
+  outline: 0;
+  border: none;
+  font-family: inheritc;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+form {
+  width: 100%;
+}
+
+input {
+  border: 1px solid var(--pink-color);
+  outline: 0;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 100;
+  border-radius: 2rem;
+  width: 50%;
+  padding: 1rem;
+  color: var(--dark-grey-color);
+}
+
+/* for Text */
+.text-black {
+  color: var(--black-color);
+}
+
+.text-light-black {
+  color: var(--light-black-color);
+}
+
+.text-dark-grey {
+  color: var(--dark-grey-color);
+}
+
+.text-white {
+  color: var(--white-color);
+}
+
+.text-navy {
+  color: var(--navy-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Font Weights */
+.fw-3 {
+  font-weight: 300;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+
+.fw-5 {
+  font-weight: 500;
+}
+
+.fw-6 {
+  font-weight: 600;
+}
+
+.fw-7 {
+  font-weight: 700;
+}
+
+.fw-8 {
+  font-weight: 800;
+}
+
+.fw-9 {
+  font-weight: 900;
+}
+
+/* Font Sizes */
+.fs-15 {
+  font-size: 1.5rem;
+}
+
+.fs-16 {
+  font-size: 1.6rem;
+}
+
+.fs-17 {
+  font-size: 1.7rem;
+}
+
+.fs-18 {
+  font-size: 1.8rem;
+}
+
+.fs-20 {
+  font-size: 2rem;
+}
+
+.fs-22 {
+  font-size: 2.2rem;
+}
+
+.fs-24 {
+  font-size: 2.4rem;
+}
+
+.fs-26 {
+  font-size: 2.6rem;
+}
+
+/* Letter Spacing */
+.ls-1 {
+  letter-spacing: 1px;
+}
+
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-sb {
+  justify-content: space-between;
+}
+
+.flex-c {
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+/* Padding */
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
 }
