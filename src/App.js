@@ -2,7 +2,7 @@ import { useReducer, useState } from 'react';
 import './index.css';
 
 function App() {
-  
+
   const reducer = (state, action) => {
     switch (action.type) {
       case 'addToDo':
@@ -33,37 +33,37 @@ function App() {
     }
   };
   return <div className="App">
-  Todo List task
-  <div>
-        <input
-          type="text"
-          value={newTodo}
-          onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Add a new task"
-        />
-        <button onClick={handleAddToDo}>Add</button>
-      </div>
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>
-            <span
-              style={{
-                textDecoration: todo.completed ? 'line-through' : 'none',
-                color: todo.completed ? 'green' : 'red',
-              }}
-            >
-              {todo.text}
-            </span>
-            <button className='
+    <h1> Todo List task</h1>
+    <div>
+      <input
+        type="text"
+        value={newTodo}
+        onChange={(e) => setNewTodo(e.target.value)}
+        placeholder="Add a new task"
+      />
+      <button onClick={handleAddToDo}>Add</button>
+    </div>
+    <ul>
+      {todos.map((todo, index) => (
+        <li key={index}>
+          <span
+            style={{
+              textDecoration: todo.completed ? 'line-through' : 'none',
+              color: todo.completed ? 'green' : 'red',
+            }}
+          >
+            {todo.text}
+          </span>
+          <button className='
             ' onClick={() => dispatch({ type: 'toggleFinished', index })}>
-              {todo.completed ? 'Unfinish' : 'Finish'}
-            </button>
-            <button className='rbtn' onClick={() => dispatch({ type: 'deleteToDo', index })}>
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
+            {todo.completed ? 'Unfinish' : 'Finish'}
+          </button>
+          <button className='rbtn' onClick={() => dispatch({ type: 'deleteToDo', index })}>
+            Delete
+          </button>
+        </li>
+      ))}
+    </ul>
   </div>;
 }
 
